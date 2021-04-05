@@ -2,16 +2,21 @@ import React, { Component } from 'react'
 import './App.css';
 import SearchBox from './SearchBox'
 import CardList from './CardList'
-import { monsters } from './monsters'
 
 class App extends Component {
 
   constructor() {
     super()
     this.state = {
-      monsters: monsters,
+      monsters: [],
       searchString: ''
     }
+  }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => this.setState({monsters: users}))
   }
 
   filterMonsters = (event) => {
@@ -24,15 +29,31 @@ class App extends Component {
       return monster.name.toLowerCase().includes(this.state.searchString.toLowerCase())
     })
 
-    console.log()
-
-    return (
-      <div className="text-center wrapper">
-        <h1 className="code white f1">Monster Friends</h1>
-        <SearchBox onSearch={this.filterMonsters} />
-        <CardList monsters={filteredMonsters} />
-      </div>
-    )
+    if(this.state.monsters.length === 0) {
+      return (
+        <div className="text-center wrapper">
+          <h1>Loading</h1>
+        </div>
+      )
+    }
+    else if (filteredMonsters.length === 0) {
+      return (
+        <div className="text-center wrapper">
+          <h1>Monster Friends</h1>
+          <SearchBox onSearch={this.filterMonsters} />
+          <p>No monster named {this.state.searchString} found!</p>
+        </div>
+      )
+    } 
+    else {
+      return (
+        <div className="text-center wrapper">
+          <h1>Monster Friends</h1>
+          <SearchBox onSearch={this.filterMonsters} />
+          <CardList monsters={filteredMonsters} />
+        </div>
+      )
+    }
   }
 }
 
