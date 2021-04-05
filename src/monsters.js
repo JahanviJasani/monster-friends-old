@@ -1,9 +1,8 @@
 export const monsters = [
   {
     id: 1,
-    name: 'Leanne Graham',
-    username: 'Bret',
-    email: 'leanne@graham.biz'
+    name: 'Arnav Jalui',
+    email: 'arnav@jalui.biz'
   },
   {
     id: 2,
@@ -58,5 +57,17 @@ export const monsters = [
     name: 'Clementina DuBuque',
     username: 'Moriah.Stanton',
     email: 'clementina@dubuque.biz'
+  },
+  {
+    id: 11,
+    name: 'John Rolin',
+    username: 'Moriah.Stanton',
+    email: 'john@rolin.re'
+  },
+  {
+    id: 12,
+    name: 'Nylon Suard',
+    username: 'Moriah.Stanton',
+    email: 'nylon@suard.del'
   }
 ];

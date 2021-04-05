@@ -3,7 +3,7 @@ import Card from './Card'
 
 const CardList = ({monsters}) => {
   return (
-    <div className="tc">
+    <div className="text-center">
       {
         monsters.map(monster=>{
           return (

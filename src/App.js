@@ -27,8 +27,8 @@ class App extends Component {
     console.log()
 
     return (
-      <div className="tc">
-        <h1 className="code">Monster Friends</h1>
+      <div className="text-center wrapper">
+        <h1 className="code white f1">Monster Friends</h1>
         <SearchBox onSearch={this.filterMonsters} />
         <CardList monsters={filteredMonsters} />
       </div>

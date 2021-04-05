@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 50px 0 70px;
+}
+
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 50px;
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 0 0 20px;
+}
