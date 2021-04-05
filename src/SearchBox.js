@@ -3,7 +3,7 @@ import './SearchBox.css';
 
 const SearchBox = ({onSearch}) => {
   return (
-    <div>
+    <div className="searchbox">
       <input
         className ="pa3 ba bg-white"
         type="search"

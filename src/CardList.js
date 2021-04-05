@@ -1,9 +1,10 @@
 import React from 'react'
 import Card from './Card'
+import './CardList.css'
 
 const CardList = ({monsters}) => {
   return (
-    <div className="text-center">
+    <div className="text-center card-list">
       {
         monsters.map(monster=>{
           return (
