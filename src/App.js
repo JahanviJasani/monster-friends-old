@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './App.css';
-import Card from './Card'
+import CardList from './CardList'
+import { monsters } from './monsters'
 
 const App = () => {
   return (
     <div className="tc">
-      <Card />
+      <CardList monsters={monsters}/>
     </div>
   )
 }
