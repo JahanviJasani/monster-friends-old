@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
-import SearchBox from './SearchBox'
-import CardList from './CardList'
-import Scroll from './Scroll'
+import SearchBox from '../components/SearchBox'
+import CardList from '../components/CardList'
+import Scroll from '../components/Scroll'
 
 class App extends Component {
 
@@ -25,12 +25,12 @@ class App extends Component {
   }
 
   render() {
-
-    const filteredMonsters = this.state.monsters.filter (monster => {
-      return monster.name.toLowerCase().includes(this.state.searchString.toLowerCase())
+    const { monsters, searchString } = this.state;
+    const filteredMonsters = monsters.filter (monster => {
+      return monster.name.toLowerCase().includes(searchString.toLowerCase())
     })
 
-    if(this.state.monsters.length === 0) {
+    if(!monsters.length) {
       return (
         <div className="text-center wrapper">
           <h1>Loading</h1>

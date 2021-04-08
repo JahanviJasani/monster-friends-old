@@ -3,7 +3,3 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  margin-top: 0.8rem;
-}
